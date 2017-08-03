@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/Topinaqui/json-spec-builder.git"
   },
-  "bin": "./json-spec-builder",
+  "bin": "./json-spec-builder.js",
   "engines": {
     "node": ">=4.2.4"
   },
