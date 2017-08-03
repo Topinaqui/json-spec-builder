@@ -1,14 +1,12 @@
 #!/usr/bin/env node
 
 const ArgumentHandler = require("./lib/ArgumentHandler");
-const SPECBuilder = require('./lib/SPECBuilder');
-
-module.exports = function() {
+const SPECBuilder = require("./lib/SPECBuilder");
 
   let oArgumentHandler = new ArgumentHandler(process.argv);
   let jsonFile = "";
   let resultFolder = "";
-
+  console.log("Building ...");
   if (jsonFile = oArgumentHandler.getLineParam("-json"))
     if(resultFolder = oArgumentHandler.getLineParam("-dest")){
 
@@ -22,5 +20,3 @@ module.exports = function() {
 
     console.log("Verifique se forneceu os parâmetros -json e -dest.");
   }
-
-}
