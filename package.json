@@ -1,6 +1,6 @@
 {
   "name": "json-spec-builder",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Build a spec based on a JSON file",
   "main": "json-spec-builder.js",
   "scripts": {
