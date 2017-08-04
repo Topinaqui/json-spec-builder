@@ -6,11 +6,12 @@ const SPECBuilder = require("./lib/SPECBuilder");
   let oArgumentHandler = new ArgumentHandler(process.argv);
   let jsonFile = "";
   let resultFolder = "";
-  console.log("Building ...");
-  if (jsonFile = oArgumentHandler.getLineParam("-json"))
-    if(resultFolder = oArgumentHandler.getLineParam("-dest")){
 
-    //Verificar os parâmetros
+  jsonFile = oArgumentHandler.getLineParam("-json");
+  resultFolder = oArgumentHandler.getLineParam("-dest")
+
+    if(jsonFile && resultFolder) {
+
     let Builder = new SPECBuilder();
 
     let fileName = oArgumentHandler.getLineParam("-name");
@@ -18,5 +19,5 @@ const SPECBuilder = require("./lib/SPECBuilder");
     Builder.buildSpecFrom(jsonFile, resultFolder, (fileName || ""));
   } else {
 
-    console.log("Verifique se forneceu os parâmetros -json e -dest.");
+    console.log("Verify if you supplied -json and -dest parameters.");
   }
